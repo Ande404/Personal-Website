@@ -1,0 +1,273 @@
+
+/*
+#content {
+	 max-width: 100vw;
+	  max-height: 100vh;
+	 overflow-x: hidden;
+	 box-sizing: border-box;
+	 scroll-behavior: smooth;
+}*/
+html {
+overflow-x: hidden !important;
+}
+
+body {
+	color: #c6c6c6;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	background-color: black;
+	width: 100vw;
+	overflow-x: hidden !important;
+	cursor: pointer;
+
+
+}
+/*
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('font/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('font/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+nav {
+	grid-area: nav;
+	position: fixed;
+	/* top: auto;
+	bottom: auto; */
+	box-sizing: inherit;
+	padding: 10px 100px;
+	height: 120px;
+	width: 100vw;
+	color: #e8ac00;
+	transition: .7s !important;
+}
+
+nav .name-nav {
+	float: left;
+	font-size: 20pt;
+	padding: 10px;
+}
+
+nav ul {
+	display: flex;
+	float: right;
+	list-style: none;
+	line-height: normal;
+}
+
+nav ul li {
+	padding: 20px;
+	letter-spacing: 2px;
+}
+
+nav ul li a {
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 0;
+}
+
+nav ul li a:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 100px;
+	height: 2px;
+	background: #faf6e9;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: 50% 50%;
+	transition: .7s;
+}
+
+nav ul li a:hover:after {
+	transform: translateX(-50%) scaleX(1);
+	transform-origin: 50% 50%;
+}
+
+/* Controls appearance of nav on Scroll */
+.white {
+	padding: 0 100px;
+	background: rgb(232,172,0,1);
+	color: black;
+	transition: 1s;
+	height: 60px;
+	z-index: 20000;
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #faf6e9;
+}
+
+nav .menu {
+	display: none;
+}
+
+footer {
+	grid-area: footer;
+	box-sizing: inherit;
+	padding: 30px 100px 0 100px;
+	margin-top: 50px;
+	background: #141414;
+	color: /*#e8ac00*/#c59e2b;
+}
+
+footer .content-media ul {
+	display: inline-flex;
+	list-style: none;
+	margin-right: 50px;
+}
+
+footer .content-media ul li {
+	padding: 20px 35px;
+}
+
+
+footer .attributions {
+	color: #666;
+	border-top: solid 1px #666;
+	padding-top: 5px;
+	font-size: 13px;
+}
+
+
+/* mobile devices */
+@media only screen and (max-device-width: 850px) {
+
+	nav {
+		padding: 0 20px;
+		height: 100px;
+		z-index: 10000;
+	}
+
+	nav .name-nav {
+		font-size: 16pt;
+		padding: 20px 0;
+	}
+
+	nav .menu {
+		display: block;
+		float: right;
+		padding: 20px 0;
+		cursor: pointer;
+	}
+
+	.material-icons.md-36 {
+		 font-size: 30px;
+	 }
+
+	 .material-icons.md-36:active {
+		 color: #faf6e9;
+	 }
+
+	nav ul {
+		position: absolute;
+		right:0;
+		height: 90vh;
+		top: 10vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+		color: black;
+		transition: transform 0.5s ease-in;
+		background: #e8ac00;
+		transform: translateX(100%);
+
+	}
+
+	nav ul li {
+		opacity: 0;
+		padding: 50px 20px;
+		letter-spacing: 5px;
+	}
+
+	.nav-active {
+		transform: translate(0%);
+	}
+
+	@keyframes navLinkFade {
+			from {
+				opacity: 0;
+				transform: translateX(50px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+	}
+
+	/* Controls appearance of nav on Scroll */
+	.white {
+		padding: 0 20px;
+	}
+
+
+	footer {
+		padding: 20px 20px 0 20px;
+		margin-top: 10px;
+	}
+
+	footer .content-media ul {
+		padding-right: 0;
+	}
+
+	footer .content-media ul li {
+		padding: 0 20px;
+	}
+
+	footer .attributions {
+		padding-top: 5px;
+		font-size: 10px;
+	}
+
+	i.fab,
+	i.fas {
+		font-size: 1.5em;
+	}
+
+}
+
+ /*mobile devices of max width 330px*/
+	@media only screen and (max-device-width: 330px) {
+
+		nav ul li {
+			padding: 40px 20px;
+			letter-spacing: 5px;
+		}
+
+		footer .content-media ul {
+			margin-right: none;
+		}
+			footer .attributions {
+				font-size: 7pt;
+			}
+
+			i.fab,
+			i.fas {
+				font-size: 1.2em;
+			}
+
+	}
+
+
+/* for screens larger than a Standard 15 inch Laptop */
+@media only screen and (min-width: 1800px) {
+
+	nav {
+		padding: 10px 200px;
+	}
+
+	footer {
+		padding: 30px 200px 0 200px;
+	}
+
+}

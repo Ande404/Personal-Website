@@ -1,0 +1,328 @@
+
+#content{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-auto-rows: minmax(120px, auto);
+	grid-gap: 5px;
+	max-width: 100vw;
+	margin: 0 auto;
+  grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+				"section section section section"
+        "main main main main"
+        "main main main main"
+        "footer footer footer footer";
+}
+
+header {
+	grid-area: header;
+	box-sizing: inherit;
+	display: flex;
+	padding: 10px 100px 100px 100px;
+	height: 100vh;
+}
+
+header .img-head img {
+	height: 700px;
+	width: 630px;
+}
+
+.intro {
+	box-sizing: inherit;
+	padding: 200px 0 0 100px;
+	white-space: nowrap;
+	line-height: .5;
+}
+
+.intro h1 {
+	letter-spacing: 5px;
+	color: #e8ac00;
+	font-size: 36pt;
+}
+.intro h5 {
+	color: #c6c6c6;
+}
+.btn-outline-warning {
+	border-radius: .5rem;
+	/* margin-top: 15px; */
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+	grid-area: section;
+	box-sizing: inherit;
+	padding: 50px 100px;
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	float: left;
+	max-width: 600px;
+	padding: 10px;
+}
+
+.about-me h1 {
+	letter-spacing: 5px;
+	color: #e8ac00;
+}
+
+.about-me p {
+	text-align:left;
+	font-size: 16pt;
+	color: #c6c6c6;
+}
+
+.about-me-signiture {
+	float: right;
+	text-align: right;
+	align-items: flex-end;
+	margin-left: auto;
+	margin-right: 0;
+}
+
+main {
+	grid-area: main;
+	box-sizing: inherit;
+	padding: 100px 110px 0 110px;
+}
+
+.title-main {
+	box-sizing: inherit;
+	font-size: 36pt;
+	padding-bottom: 60px;
+	text-align: center;
+	color: #e8ac00;
+	letter-spacing: 5px;
+}
+
+.card {
+	color: white;
+	height: 450px;
+	transition: all .5s ease-in-out;
+	max-width: auto;
+	border-radius: 8px;
+	border-width: 0;
+	background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+}
+
+.card:hover {
+	transition: .5s;
+	transform: scale(1.03);
+}
+
+.card1 {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, .1),
+      rgba(0, 0, 0, .85)
+    ),
+		url(../images/map2.png);
+}
+
+.card2 {
+	background-image:  linear-gradient(
+      rgba(0, 0, 0, .1),
+      rgba(0, 0, 0, .85)
+    ),
+		url(../images/dummy1.jpg);
+}
+
+.card3 {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, .1),
+		rgba(0, 0, 0, .85)
+    ),
+		url(../images/path-finder.png);
+}
+
+.card .card-body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+}
+
+main h4 {
+	color: #c6c6c6;
+	padding-bottom: 15px;
+	margin-bottom: 0;
+}
+
+/* mobile devices */
+@media only screen and (max-device-width: 850px) {
+
+	#content{
+		grid-template-columns: 50% 50%;
+		grid-auto-rows: minmax(120px, auto);
+	  grid-template-areas:
+	        "nav nav"
+	        "header header"
+					"section section"
+	        "main main"
+	        "main main"
+	        "footer footer";
+	}
+
+	header {
+		padding: 0 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+header .img-head img {
+	height: 473px;
+	width: 450px;
+}
+
+.intro {
+	padding: 50px 0;
+}
+
+.intro h1 {
+	font-size: 28pt;
+	letter-spacing: 5px;
+}
+
+.intro h5 {
+	font-size: 13pt;
+}
+
+
+	section {
+		padding: 30px 20px 0 20px;
+		margin: 50px 0;
+		flex-direction: column;
+	}
+
+	.about-me {
+		max-width: 95vw;
+		padding: 10px;
+	}
+
+	.about-me h1 {
+		font-size: 26pt;
+		letter-spacing: 2px;
+	}
+
+	.about-me p {
+		font-size: 13pt;
+	}
+
+	.about-me-signiture {
+		padding: 10px;
+		margin: 0 auto;
+		text-align: center;
+		align-items: center;
+	}
+
+	main {
+		padding: 0 20px;
+	}
+
+	main .title-main h1 {
+		font-size: 26pt;
+		letter-spacing: 2px;
+	}
+
+ 	.card-deck {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+	}
+	.card {
+		margin: 20px;
+		width: 60%;
+
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.card {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 360px) {
+
+	.intro {
+		padding: 10px 0 100px 0;
+	}
+
+	.intro h1 {
+		font-size: 26pt;
+		letter-spacing: 5px;
+	}
+
+	.intro h5 {
+		font-size: 11pt;
+	}
+
+	.card {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 340px) {
+
+	.intro h1 {
+		font-size: 24pt;
+		letter-spacing: 5px;
+	}
+
+	.intro h5 {
+		font-size: 10pt;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+	.about-me-signiture img {
+		height: 235px;
+		width: 300px;
+}
+}
+
+
+@media screen and (max-width: 1200px) {
+	main {
+		padding: 100px 50px 0 50px;
+	}
+}
+
+
+/* for screens larger than a Standard 15 inch Laptop */
+@media only screen and (min-width: 1800px) {
+
+	header {
+		padding: 180px 300px 0 300px;
+	}
+
+	.intro {
+		padding: 150px 0 0 200px;
+	}
+
+	.intro h2 {
+		letter-spacing: 15px;
+	}
+
+	section {
+		padding: 50px 300px;
+	}
+
+	.about-me-signiture {
+		padding-left: 400px;
+	}
+
+	main {
+		padding: 100px 300px 0 300px;
+
+	}
+
+}

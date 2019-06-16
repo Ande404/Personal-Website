@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="Andrew" content="personal webiste"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home | Andrew Luwaga</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favi/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favi/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favi/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="styles/general-stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="styles/stylesheet-Andrew_website.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async src="scripts/index-Andrew_website.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
+</head>
+
+<body>
+	<!--data-aos-easing="linear"-->
+<div id="content">
+  <% include partials/nav.ejs %>
+
+	<header>
+		<div class="img-head" data-aos="fade" data-aos-delay="500" data-aos-easing="ease-in-sine" data-aos-duration="900">
+			<img src="images/sample-image.png">
+		</div>
+		<div class="intro" data-aos="fade-up" data-aos-delay="900" data-aos-easing="ease-in-sine" data-aos-duration="600">
+			<h1> <%= person %> </h1>
+		  <br>
+			<h5>Software Engineering Student</h5>
+			<br>
+			<div class="download-me">
+				<a href="docs/Andrew Luwaga Resume-1.pdf" class="btn btn-lg btn-outline-warning" role="button" download="Andrew-Luwaga-Resume.pdf" >
+				 Download Resume
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<section data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine" data-aos-duration="500">
+		<div class="about-me"><h1>About me <br/><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1>
+			<p>I was never the best at school or academics. I am just a super determined and very open minded guy. I built
+			this website as a platform to showcase the projects I've worked on and to share my portfolio with potential
+		  clients, employers and business partners.</p>
+		</div>
+		<div class="about-me-signiture"><img src="images/chun-signiture.png"></div>
+	</section>
+
+  <main data-aos="fade" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">
+    <div class="title-main"><a href="Projects.html"><h1>Projects<br><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1></a></div>
+		<div class="card-deck">
+			<div class="card card1">
+			 	<div class="card-body">
+			 		<h4 class="card-title">University Map.</h4>
+						<a class="btn btn-secondary" href="https://www.manchester.edu/map" role="button" rel="noopener noreferrer">Explore</a>
+			  </div>
+		 	</div>
+		  <div class="card card2">
+		 		<div class="card-body">
+		      	<h4 class="card-title">This Website.</h4>
+						<a class="btn btn-secondary" href="#" role="button">Explore</a>
+		   		</div>
+			 </div>
+		 	 <div class="card card3">
+		   			<div class="card-body">
+		      		<h4 class="card-title">* Path Finder.</h4>
+		      		<a class="btn btn-secondary" href="#" role="button">Explore</a>
+		   			</div>
+		   </div>
+		 </div>
+  </main>
+
+<% include partials/footer.ejs %>
+
+	</div>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+			once: true
+		});
+  </script>
+</body>
+</html>

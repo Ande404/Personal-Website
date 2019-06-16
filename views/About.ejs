@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+	<meta name="Andrew" content="personal webiste"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="styles/general-stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="styles/About-me-stylesheet.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async src="scripts/index-Andrew_website.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
+</head>
+
+<body>
+  <div id="content">
+    <div class="test">
+    <% include partials/nav.ejs %>
+
+    <section>
+      <div class="about-me"><h1>About me<br/><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1>
+  			<p><br/>I am a<br/></p>
+        <div class="about-me-statement"><p>super determined and very open minded guy!</p></div>
+        <p><br/>I grew up in Kampala, Uganda and moved to the United States to pursue a software engineering degree at Manchester Univeristy.
+          My goal is to work at a reputable Tech company in the USA and Ultimately, I aspire to start my own Tech related Company.
+          I intend to achieve this by undertaking various projects and internships in order to gather the experience and exposure
+          that I deem necessary to excel in Software Engineering.
+  			</p>
+  		</div>
+    </section>
+  </div>
+    <main>
+      <br>
+      <div class="skills">
+        <div class="skills-title"><h1>Skills<br/><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1></div>
+        <div class="skills-body">
+          <ul>
+            <li><img src="https://img.icons8.com/color/96/000000/java-coffee-cup-logo.png"><br/><p>Java</p></li>
+            <li><img src="https://img.icons8.com/color/96/000000/html-5.png"><br/><p>Html</p></li>
+            <li><img src="https://img.icons8.com/color/96/000000/css3.png"><br/><p>CSS</p></li>
+            <li><img src="https://img.icons8.com/color/96/000000/javascript.png"><br/><p>JavaScript</p></li>
+            <li><img src="https://img.icons8.com/ultraviolet/96/000000/physics.png"><br/><p>React.js</p></li>
+            <li><img src="https://img.icons8.com/color/96/000000/nodejs.png"><br/><p>Node.js</p></li>
+          </ul>
+          <br>
+          <br>
+          <div class="download-me">
+            <a href="about" class="btn btn-lg btn-warning" role="button">
+             Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <% include partials/footer.ejs %>
+
+  </div>
+</body>
+
+</html>

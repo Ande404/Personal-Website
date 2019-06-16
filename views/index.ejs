@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="Andrew" content="personal webiste"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="/styles/general-stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="styles/stylesheet-Andrew_website.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" async src="scripts/index-Andrew_website.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
+</head>
+
+<body>
+<div id="content">
+  <% include partials/nav.ejs %>
+
+	<header>
+		<div class="img-head">
+			<img src="images/sample-image.png">
+		</div>
+		<div class="intro">
+			<h1>Andrew Luwaga</h1>
+		  <br>
+			<h5>Software Engineering Student</h5>
+			<br>
+			<div class="download-me">
+				<a href="/" class="btn btn-lg btn-outline-warning" role="button">
+				 Download Resume
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="about-me"><h1>About me <br/><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1>
+			<p>I was never the best at school or academics. I am just a super determined and very open minded guy. I built
+			this website as a platform to showcase the projects I've worked on and to share my portfolio with potential
+		  clients, employers and business partners.</p>
+		</div>
+		<div class="about-me-signiture"><img src="images/chun-signiture.png"></div>
+	</section>
+
+  <main>
+    <div class="title-main"><h1>Projects<br><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1></div>
+		<div class="card-deck">
+			<div class="card card1">
+			 	<div class="card-body">
+			 		<h4 class="card-title">University Map.</h4>
+						<a class="btn btn-secondary" href="#" role="button" rel="noopener noreferrer">Explore</a>
+			  </div>
+		 	</div>
+		  <div class="card card2">
+		 		<div class="card-body">
+		      	<h4 class="card-title">This Website.</h4>
+						<a class="btn btn-secondary" href="#" role="button">Explore</a>
+		   		</div>
+			 </div>
+		 	 <div class="card card3">
+		   			<div class="card-body">
+		      		<h4 class="card-title">* Path Finder.</h4>
+		      		<a class="btn btn-secondary" href="#" role="button">Explore</a>
+		   			</div>
+		   </div>
+		 </div>
+  </main>
+
+<% include partials/footer.ejs %>
+
+	</div>
+</body>
+</html>

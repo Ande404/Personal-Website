@@ -1,0 +1,151 @@
+
+
+#content{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-auto-rows: minmax(120px, auto);
+	grid-gap: 5px;
+	max-width: 100vw;
+	margin: 0 auto;
+  grid-template-areas:
+        "nav nav nav nav"
+				"section section section section"
+				"main main main main"
+        "footer footer footer footer";
+}
+nav {
+	background: transparent;
+}
+.test {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.8)
+    ),
+		url(../images/dummy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+	background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+
+section {
+	grid-area: section;
+	display: flex;
+	padding: 150px 100px 0 100px;
+}
+
+section .about-me {
+	box-sizing: inherit;
+	padding: 10px;
+}
+
+section .about-me h1 {
+	text-align: left;
+	letter-spacing: 5px;
+  color: #e8ac00;
+}
+
+section .about-me p {
+	font-size: 16pt;
+}
+
+section .about-me-statement p {
+	color: #e8ac00;
+	font-size: 30pt;
+}
+
+
+main {
+	grid-area: main;
+	padding: 50px 100px;
+}
+
+main h1 {
+	color: #e8ac00;
+	letter-spacing: 5px;
+	text-align: left;
+}
+
+main ul {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	grid-gap: 4rem;
+	padding: 0;
+}
+main ul li:hover {
+	transform: translateY(-15px);
+	transition: .7s;
+}
+
+main p {
+	color: #c6c6c6;
+}
+
+/* mobile devices */
+@media only screen and (max-device-width: 1200px) {
+	section {
+		padding: 80px 100px;
+
+	}
+
+	section .about-me h1 {
+		font-size: 4vh;
+		letter-spacing: 2px;
+	}
+
+	section .about-me p {
+			font-size: 2.5vh;
+
+	}
+
+	section .about-me-statement p {
+			font-size: /*12pt;*/2.5vh;
+
+	}
+}
+@media only screen and (max-device-width: 869px) {
+
+	#content{
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: minmax(120px, auto);
+	  grid-template-areas:
+	        "nav nav"
+					"section section"
+	        "main main"
+	        "footer footer";
+	}
+
+	section {
+		padding: 80px 10px;
+	}
+
+	section .about-me h1 {
+		font-size: 4vh;
+		letter-spacing: 2px;
+	}
+
+	section .about-me p {
+			font-size: 2.5vh;
+			margin-bottom: 0;
+	}
+
+	section .about-me-statement p {
+			font-size: 2.5vh;
+			margin-bottom: 0;
+	}
+
+	main {
+		padding: 0 20px 20px 20px;
+	}
+
+
+
+	.btn-lg {
+		font-size: 1rem;
+	}
+
+
+}

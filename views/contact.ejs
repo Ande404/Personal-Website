@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="Andrew" content="personal webiste"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="styles/general-stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="styles/contact-me-stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script type="text/javascript" async src="scripts/index-Andrew_website.js"></script>
+    <script type="text/javascript" async src="scripts/contact-me.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content">
+
+      <% include partials/nav.ejs %>
+
+      <main>
+        <div class="main-content">
+        <div class="heading-email"><h1>Send me an Email<br/><img src="https://img.icons8.com/ios-glyphs/50/ffffff/horizontal-line.png"></h1></div>
+        <div class="alert alert-success" role="alert"> Your Message has been sent successfully </div>
+        <form id="contactForm" class="needs-validation" autocomplete="off" novalidate>
+          <div class="col-10">
+          <div class="form-row">
+            <label for="validationCustom01">Name</label>
+            <input type="text" id="name" class="form-control" required>
+            <div class="invalid-feedback">
+              You forgot to tell us your name
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="validationCustom02">Email address</label>
+            <input type="email" id="email-address" class="form-control" aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="invalid-feedback">
+             Please provide an email address
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="validationCustom03">Subject</label>
+            <input type="text" id="subject" class="form-control" required>
+            <div class="invalid-feedback">
+             Please provide a subject statement
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="validationCustom04">Message</label>
+            <textarea class="form-control" id="message" placeholder="..." rows="5"></textarea>
+            <div class="invalid-feedback">
+             Please input your message.
+            </div>
+          </div>
+          </div>
+          <button class="btn btn-primary btn-warning float-left" type="submit">Submit</button>
+        </form>
+        </div>
+      </main>
+
+      <% include partials/footer.ejs %>
+
+    </div>
+  </body>
+</html>
