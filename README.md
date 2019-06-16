@@ -16,8 +16,7 @@ All html pages are in the /views/ directory. These are ejs files which
 call partials in ejs to include html in other pages.
 
 ## Static Files (CSS, Javascript)
-/styles
-/scripts
+/styles and /scripts
 
 When an html page links to a stylesheet or some script, express serves the Static
 files from either the /styles or /scripts. 
@@ -26,9 +25,7 @@ For example:
 
 /views/index.ejs     has a stylesheet href="styles/stylesheet.css"
 
-Since express serves our static files for us it actually grabs the css from
-
-/styles
+Since express serves our static files for us it actually grabs the css from /styles
 
 This makes it easy to use relative addresses in hrefs of html files, so long
 as you continue this directory structure of placing static files in /static
